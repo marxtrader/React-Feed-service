@@ -1,1 +1,1 @@
-# React-Feed-servive
+# React-Feed-service
