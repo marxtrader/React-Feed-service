@@ -30,7 +30,6 @@ class App extends Component {
   
   handleFeedQuote(quote) {
     this.setState(prevState => {
-      console.log(JSON.stringify(prevState.instruments))
       let newInstruments = prevState.instruments.map(item => {
         if(item.symbol === quote.symbol) {
           const newItem = Object.assign({}, {
@@ -50,7 +49,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Quote Feed</h1>
-        <table style={{margin:'auto', width:'50%', fontSize:'20px'}}>
+        <table>
           <thead>
             <tr>
               <th>Symbol</th>
