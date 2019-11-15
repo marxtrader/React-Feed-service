@@ -8,10 +8,10 @@ class App extends Component {
 
     this.state = {
       instruments: [
-        { symbol: 'BTCUSD', bid: null, ask: null },
-        { symbol: 'BTCEUR', bid: null, ask: null },
-        { symbol: 'ETHUSD', bid: null, ask: null },
-        { symbol: 'ETHEUR', bid: null, ask: null }
+        { symbol: 'BTCUSD', bid: null, ask: null, high: null, low: null },
+        { symbol: 'BTCEUR', bid: null, ask: null, high: null, low: null },
+        { symbol: 'ETHUSD', bid: null, ask: null, high: null, low: null },
+        { symbol: 'ETHEUR', bid: null, ask: null, high: null, low: null }
       ]
     }
     
@@ -51,13 +51,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Quote Feed</h1>
+        <h1>Crypto Assets</h1>
         <table>
           <thead>
             <tr>
               <th>Symbol</th>
               <th>Bid</th>
               <th>Ask</th>
+              <th>High</th>
+              <th>Low</th>
             </tr>
           </thead>
           <tbody>
@@ -66,6 +68,8 @@ class App extends Component {
                 <td>{item.symbol}</td>
                 <td>{item.bid}</td>
                 <td>{item.ask}</td>
+                <td>{item.high}</td>
+                <td>{item.low}</td>
               </tr>
             ))}
           </tbody>
