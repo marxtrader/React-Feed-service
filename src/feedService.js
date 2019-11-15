@@ -1,4 +1,4 @@
-const WEBSOCKET_URL = "ws://lucror.marx.tech:8785/websocket";
+const WEBSOCKET_URL = "ws://52.43.85.86:8785/websocket";
 
 let socket;
 let msgSeqNum = 0;

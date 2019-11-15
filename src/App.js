@@ -8,7 +8,10 @@ class App extends Component {
 
     this.state = {
       instruments: [
-        { symbol: 'EURUSD', bid: null, ask: null }
+        { symbol: 'BTCUSD', bid: null, ask: null },
+        { symbol: 'BTCEUR', bid: null, ask: null },
+        { symbol: 'ETHUSD', bid: null, ask: null },
+        { symbol: 'ETHEUR', bid: null, ask: null }
       ]
     }
     
@@ -23,7 +26,7 @@ class App extends Component {
   handleConnectionOpen() {
     this.state.instruments.forEach(item => {
       feed.subscribe(new feed.SubscriptionKey(
-        item.symbol, 9, "LIQUIDX", "LIQUIDX", "FOREXLEVEL1"
+        item.symbol, 2, "BFWS", "BFWS", "FOREXLEVEL1"
       ))
     })
   }
